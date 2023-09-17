@@ -33,6 +33,8 @@
             this.strikepath = new System.Windows.Forms.RichTextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.output = new System.Windows.Forms.RichTextBox();
+            this.label3 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // mapName
@@ -50,7 +52,7 @@
             this.Find.Name = "Find";
             this.Find.Size = new System.Drawing.Size(75, 23);
             this.Find.TabIndex = 1;
-            this.Find.Text = "button1";
+            this.Find.Text = "Download";
             this.Find.UseVisualStyleBackColor = true;
             this.Find.Click += new System.EventHandler(this.Find_Click);
             // 
@@ -60,7 +62,7 @@
             this.strikepath.Name = "strikepath";
             this.strikepath.Size = new System.Drawing.Size(418, 29);
             this.strikepath.TabIndex = 2;
-            this.strikepath.Text = "E:\\Steam2\\steamapps\\common\\Counter-Strike Source\\cstrike\\download\\maps";
+            this.strikepath.Text = "E:\\Steam2\\steamapps\\common\\Counter-Strike Source\\cstrike\\download\\maps/";
             // 
             // label1
             // 
@@ -81,18 +83,38 @@
             this.label2.TabIndex = 4;
             this.label2.Text = "CS:S Path";
             // 
+            // output
+            // 
+            this.output.Location = new System.Drawing.Point(12, 182);
+            this.output.Name = "output";
+            this.output.Size = new System.Drawing.Size(521, 178);
+            this.output.TabIndex = 5;
+            this.output.Text = "";
+            this.output.TextChanged += new System.EventHandler(this.output_TextChanged);
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(9, 166);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(39, 13);
+            this.label3.TabIndex = 6;
+            this.label3.Text = "Output";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.output);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.strikepath);
             this.Controls.Add(this.Find);
             this.Controls.Add(this.mapName);
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.Text = " ";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -106,6 +128,8 @@
         private System.Windows.Forms.RichTextBox strikepath;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.RichTextBox output;
+        private System.Windows.Forms.Label label3;
     }
 }
 
